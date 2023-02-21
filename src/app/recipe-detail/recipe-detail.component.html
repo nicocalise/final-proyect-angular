@@ -1,0 +1,9 @@
+<p>Soy La receta: {{ recipe?.title }}</p>
+<p>Mis Instrucciones y mas vale que sepas ingles son:</p>
+<ul *ngFor="let receta of recipe?.analyzedInstructions; let index = index">
+    <li *ngFor="let paso of receta.steps; let index = index">
+       {{ paso.step }}
+    </li>
+  </ul>
+
+<a [routerLink]="['/recipe-list']"> Atras</a>

@@ -1,0 +1,7 @@
+<div *ngIf="recipeList.length">
+    <h3>Recetas</h3>
+    <div *ngFor="let recipe of recipeList">
+      <a [routerLink]="['/recipe-list/', recipe.id]">{{ recipe.id }} - {{ recipe.title }}</a>
+      <img [src]="recipe.image" [alt]="recipe.title">
+    </div>
+</div>
